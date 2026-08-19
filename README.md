@@ -1,4 +1,4 @@
-#  Lógica de Programação
+# 🧠 Lógica de Programação
 
 Estudos de Lógica de Programação, organizados por aulas, exercícios e projetos.
 
