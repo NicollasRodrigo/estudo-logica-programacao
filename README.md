@@ -1,35 +1,35 @@
 # 🧠 Estudo de Lógica de Programação
 
-Repositório de estudos de **Algoritmos e Pensamento Computacional**, com atividades práticas em C organizadas na sequência das aulas do Blackboard.
+Repositório de **Nicollas Rodrigo da Mata de Santana** para registrar a evolução em Algoritmos e Pensamento Computacional, usando a linguagem C.
 
-## 👨‍💻 Estudante
+## 📚 Navegação
 
-**Nicollas Rodrigo da Mata de Santana**
+- [Checklist de atividades](./ATIVIDADES-CHECKLIST.md)
+- [Aulas](./aulas/)
+- [Documentação](./docs/)
 
-## 📚 Organização
+## 🗂️ Organização por aula
 
-- `aulas/01-introducao/`
-- `aulas/02-introducao-linguagem-c/`
-- `aulas/03-entrada-e-operadores/`
-- `aulas/04-estruturas-condicionais/`
-- `aulas/05-estruturas-de-repeticao/`
-- `aulas/06-vetores-e-matrizes/`
-- `docs/`
-- `exercicios/`
-- `projetos/`
+| Aula | Conteúdo | Situação no repositório |
+|---|---|---|
+| Aula 1 | Introdução | ⚠️ PDF não localizado |
+| Aula 2 | Introdução à linguagem C | 📘 Conteúdo/documentação |
+| Aula 3 | Entrada de dados e operadores | 📘 Conteúdo/documentação |
+| Aula 4 | Estruturas condicionais | 💻 Código agregado em `atividades.c` |
+| Aula 5 | Estruturas de repetição | 💻 Códigos agregados e atividade inicial separada |
+| Aula 6 | Vetores e matrizes | 💻 Código agregado e pesquisa em array separada |
 
-## 📈 Evolução dos conteúdos
+## 📅 Datas
 
-- Aula 2 — fundamentos da linguagem C
-- Aula 3 — entrada de dados e operadores
-- Aula 4 — estruturas condicionais
-- Aula 5 — estruturas de repetição
-- Aula 6 — vetores e matrizes
-
-## 📅 Critério das datas
-
-Os PDFs consultados não apresentam a data comprovada de realização de cada aula. Por isso, a organização usa o número da aula e não inventa datas. Datas só serão adicionadas quando houver uma fonte que as confirme.
+As datas de realização não foram inventadas. Os PDFs consultados não comprovam a data em que cada atividade foi executada. Por isso, a organização usa a sequência das aulas do Blackboard até que existam registros confiáveis das datas.
 
 ## 💻 Linguagem
 
-Atividades práticas desenvolvidas em **C**, com foco em lógica de programação, condicionais, repetição, vetores e matrizes.
+- C
+- Estruturas condicionais
+- Estruturas de repetição
+- Vetores e matrizes
+- Entrada e saída de dados
+- Operadores e lógica de programação
+
+> Consulte o checklist antes de considerar uma atividade como concluída. Ele diferencia atividades identificadas nos slides de arquivos que já estão presentes no GitHub.
