@@ -1,0 +1,18 @@
+# Aula 05 — Estruturas de Repetição
+
+1. [Números até zero](./01-numeros-ate-zero.c)
+2. [Login com do while](./02-login.c)
+3. [Imprimir de 1 a 20](./03-imprimir-1-a-20.c)
+4. [Média de curtidas](./04-media-curtidas.c)
+5. [Consumo de água](./05-consumo-agua.c)
+6. [Cofrinho digital](./06-cofrinho.c)
+7. [Média de atendimento](./07-media-atendimento.c)
+8. [Meta de 10.000 passos](./08-meta-passos.c)
+9. [Pares e ímpares](./09-pares-impares.c)
+10. [Situação de alunos](./10-situacao-alunos.c)
+11. [Maior, menor e diferença](./11-maior-menor.c)
+12. [Positivos e negativos](./12-positivos-negativos.c)
+13. [Tabuada](./13-tabuada.c)
+14. [Número primo](./14-primo.c)
+15. [Fatorial](./15-fatorial.c)
+16. [Número secreto](./16-numero-secreto.c)
