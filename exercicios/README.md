@@ -1,15 +1,5 @@
-# 💪 Exercícios
+# 💻 Exercícios
 
-Exercícios práticos de lógica de programação.
-
-## Conteúdo
-
-*Em construção.*
-
-## Objetivo
-
-Fortalecer os fundamentos da lógica de programação por meio da prática.
-
----
-
-[Voltar](https://github.com/NicollasRodrigo/estudo-logica-programacao)
+- [Estruturas condicionais](./01-condicionais/)
+- [Estruturas de repetição](./02-repeticao/)
+- [Vetores e matrizes](./03-vetores-e-matrizes/)
