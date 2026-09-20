@@ -1,10 +1,7 @@
 # 💻 Exercícios
 
-## Aula 04 — Condicionais
-[abrir exercícios](./aula-04-condicionais/)
+- [04 — Estruturas Condicionais](./aula-04-condicionais/)
+- [05 — Estruturas de Repetição](./aula-05-repeticao/)
+- [06 — Vetores e Matrizes](./aula-06-vetores-matrizes/)
 
-## Aula 05 — Repetição
-[abrir exercícios](./aula-05-repeticao/)
-
-## Aula 06 — Vetores e matrizes
-[abrir exercícios](./aula-06-vetores-matrizes/)
+> Cada exercício indica o slide correspondente no índice da pasta.
