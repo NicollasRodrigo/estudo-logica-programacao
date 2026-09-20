@@ -1,29 +1,28 @@
-# 🧠 Estudo de Lógica de Programação
+# 🧠 Estudos de Lógica de Programação
 
-Repositório de **Nicollas Rodrigo da Mata de Santana** para registrar a evolução em Algoritmos e Pensamento Computacional, usando a linguagem C.
+Repositório de **Nicollas Rodrigo da Mata de Santana** para registrar os estudos de Algoritmos e Pensamento Computacional em C.
 
-## 📚 Navegação
+## 🔎 Acesso rápido
 
-- [Checklist de atividades](./ATIVIDADES-CHECKLIST.md)
-- [Aulas](./aulas/)
-- [Documentação](./docs/)
+1. **[Atividades recentes](./ATIVIDADES-RECENTES.md)** — arquivos de 16/09 aparecem primeiro.
+2. **[Checklist de conferência](./ATIVIDADES-CHECKLIST.md)** — separa atividades completas, relacionadas e pendentes.
+3. **[Aulas](./aulas/)** — conteúdo organizado por assunto.
+4. **[Documentação](./docs/)** — explicações e referências dos temas.
 
-## 🗂️ Organização por aula
+## 📁 Organização
 
-| Aula | Conteúdo | Situação no repositório |
-|---|---|---|
-| Aula 1 | Introdução | ⚠️ PDF não localizado |
-| Aula 2 | Introdução à linguagem C | 📘 Conteúdo/documentação |
-| Aula 3 | Entrada de dados e operadores | 📘 Conteúdo/documentação |
-| Aula 4 | Estruturas condicionais | 💻 Código agregado em `atividades.c` |
-| Aula 5 | Estruturas de repetição | 💻 Códigos agregados e atividade inicial separada |
-| Aula 6 | Vetores e matrizes | 💻 Código agregado e pesquisa em array separada |
+```text
+aulas/       # conteúdo agrupado por aula
+exercicios/  # atividades práticas
+projetos/    # projetos futuros
+docs/        # documentação e relação com os slides
+```
 
-## 📅 Datas
+## 📅 Sobre as datas
 
-As datas de realização não foram inventadas. Os PDFs consultados não comprovam a data em que cada atividade foi executada. Por isso, a organização usa a sequência das aulas do Blackboard até que existam registros confiáveis das datas.
+As datas só são usadas quando há registro disponível nos arquivos enviados ou no material consultado. Quando a data oficial da aula não é comprovada, ela é indicada como **não informada**, sem invenção.
 
-## 💻 Linguagem
+## 👨‍💻 Linguagem
 
 - C
 - Estruturas condicionais
@@ -31,5 +30,3 @@ As datas de realização não foram inventadas. Os PDFs consultados não comprov
 - Vetores e matrizes
 - Entrada e saída de dados
 - Operadores e lógica de programação
-
-> Consulte o checklist antes de considerar uma atividade como concluída. Ele diferencia atividades identificadas nos slides de arquivos que já estão presentes no GitHub.
