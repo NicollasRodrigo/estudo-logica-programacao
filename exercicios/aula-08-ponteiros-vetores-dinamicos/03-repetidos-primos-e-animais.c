@@ -26,7 +26,7 @@ int main(void) {
     for (i = 0; i < d; i++) {
         for (j = 0; j < 15; j++)
             if (v[j] == num[i]) freq[i]++;
-        if (freq[i] > 1 && freq[i] % 2 && primo(num[i])) {
+        if (freq[i] % 2 && primo(num[i])) {
             qtd[i] = (long long)num[i] * freq[i];
             total += qtd[i];
         }
