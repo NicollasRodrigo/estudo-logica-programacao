@@ -58,7 +58,7 @@ int main(void) {
 
     for (i = 0; i < PARTICIPANTES; i++) {
         printf("Nome do participante %d: ", i + 1);
-        if (scanf(" %49[^\\n]", pessoas[i].nome) != 1) {
+        if (scanf(" %49[^\n]", pessoas[i].nome) != 1) {
             for (j = 0; j < i; j++) free(matriz[j]);
             free(matriz);
             return 1;
@@ -143,12 +143,12 @@ int main(void) {
         }
     }
 
-    printf("\\nClassificacao final:\\n");
+    printf("\nClassificacao final:\n");
 
     if (quantidade_lados < 2) {
-        printf("Nao foi possivel calcular a diagonal.\\n");
+        printf("Nao foi possivel calcular a diagonal.\n");
         for (i = 0; i < PARTICIPANTES; i++)
-            printf("%s - Classificacao indisponivel\\n", pessoas[i].nome);
+            printf("%s - Classificacao indisponivel\n", pessoas[i].nome);
     } else {
         diagonal = sqrtl(lados[0] * lados[0] + lados[1] * lados[1]);
 
@@ -156,11 +156,11 @@ int main(void) {
             printf("%s - ", pessoas[i].nome);
 
             if (fabsl(pessoas[i].media - diagonal) < 0.000001L)
-                printf("SOBRE A DIAGONAL\\n");
+                printf("SOBRE A DIAGONAL\n");
             else if (pessoas[i].media > diagonal)
-                printf("ACIMA DA DIAGONAL\\n");
+                printf("ACIMA DA DIAGONAL\n");
             else
-                printf("ABAIXO DA DIAGONAL\\n");
+                printf("ABAIXO DA DIAGONAL\n");
         }
     }
 
