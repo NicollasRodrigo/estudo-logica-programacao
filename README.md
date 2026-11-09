@@ -4,4 +4,5 @@ Estudos e exercícios de programação em C.
 
 ## Conteúdo
 
-- [Exercícios](./exercicios/) — prática de programação.
+- [Exercícios](./exercicios/) — atividades práticas organizadas por aula.
+- [Documentação](./docs/) — anotações e materiais de apoio.
