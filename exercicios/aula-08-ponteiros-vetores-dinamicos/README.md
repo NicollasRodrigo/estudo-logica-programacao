@@ -12,9 +12,9 @@ Atividades do material da Aula 8, na ordem do PDF.
 
 ## Entrada de dados
 
-- **Atividade 1:** informe 12 inteiros. Para cada número positivo com quantidade ímpar de ocorrências, cadastre essa quantidade de produtos: nome em uma linha e preço na seguinte. Um número negativo não pode representar uma quantidade de produtos.
+- **Atividade 1:** informe 12 inteiros. Se um número negativo aparecer uma quantidade ímpar de vezes, o programa solicitará a entrada dos 12 números novamente. Para cada número positivo ou zero com quantidade ímpar de ocorrências, cadastre essa quantidade de produtos: nome em uma linha e preço na seguinte.
 - **Atividade 2:** informe 10 inteiros.
-- **Atividade 3:** informe 15 inteiros. Para cada número primo repetido com frequência ímpar, cadastre nomes de animais em quantidade igual à soma de suas ocorrências (valor × frequência). Os nomes são lidos na ordem em que os números aparecem pela primeira vez.
+- **Atividade 3:** informe 15 inteiros. Para cada número primo com frequência ímpar (inclusive uma ocorrência), cadastre nomes de animais em quantidade igual à soma de suas ocorrências (valor × frequência). Os nomes são lidos na ordem em que os números aparecem pela primeira vez.
 - **Atividade 4:** informe nome e quantidade de termos para cada um dos cinco apostadores. A quantidade aceita vai de 1 a 92 para evitar estouro do tipo inteiro usado no cálculo.
 - **Atividade 5:** para cada participante, informe nome, idade, quantidade de valores e, em seguida, os valores. A quantidade deve ser maior que zero.
 
