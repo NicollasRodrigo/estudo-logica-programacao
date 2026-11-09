@@ -1,15 +1,15 @@
 # Organização das atividades
 
-A sequência abaixo apresenta somente as aulas que possuem exercícios cadastrados neste repositório.
+A sequência abaixo apresenta as aulas que possuem exercícios cadastrados neste repositório.
 
 ## Aulas disponíveis
 
-1. Aula 04 — Estruturas condicionais
-2. Aula 05 — Estruturas de repetição
-3. Aula 06 — Vetores e matrizes
-4. Aula 08 — Ponteiros e vetores dinâmicos
+1. [Aula 04 — Estruturas condicionais](../exercicios/aula-04-condicionais/)
+2. [Aula 05 — Estruturas de repetição](../exercicios/aula-05-repeticao/)
+3. [Aula 06 — Vetores e matrizes](../exercicios/aula-06-vetores-matrizes/)
+4. [Aula 08 — Ponteiros e vetores dinâmicos](../exercicios/aula-08-ponteiros-vetores-dinamicos/)
 
-Aulas sem materiais cadastrados não foram incluídas para evitar informações não confirmadas.
+As aulas sem materiais cadastrados não foram incluídas para evitar informações não confirmadas.
 
 ---
 
