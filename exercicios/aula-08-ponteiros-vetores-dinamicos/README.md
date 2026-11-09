@@ -12,13 +12,15 @@ Atividades do material da Aula 8, na ordem do PDF.
 
 ## Entrada de dados
 
-- **Atividade 1:** informe 12 inteiros. Depois, para cada número positivo com quantidade ímpar de ocorrências, cadastre essa quantidade de produtos: nome em uma linha e preço na seguinte. Números negativos não podem representar quantidade de produtos.
+- **Atividade 1:** informe 12 inteiros. Para cada número positivo com quantidade ímpar de ocorrências, cadastre essa quantidade de produtos: nome em uma linha e preço na seguinte. Um número negativo não pode representar uma quantidade de produtos.
 - **Atividade 2:** informe 10 inteiros.
-- **Atividade 3:** informe 15 inteiros. Para cada número primo repetido com frequência ímpar, cadastre uma quantidade de animais igual à soma de suas ocorrências (valor × frequência). Os nomes são lidos em ordem de primeira aparição dos números.
+- **Atividade 3:** informe 15 inteiros. Para cada número primo repetido com frequência ímpar, cadastre nomes de animais em quantidade igual à soma de suas ocorrências (valor × frequência). Os nomes são lidos na ordem em que os números aparecem pela primeira vez.
 - **Atividade 4:** informe nome e quantidade de termos para cada um dos cinco apostadores. A quantidade aceita vai de 1 a 92 para evitar estouro do tipo inteiro usado no cálculo.
-- **Atividade 5:** para cada participante, informe nome, idade, quantidade de valores e depois os valores. A quantidade deve ser maior que zero.
+- **Atividade 5:** para cada participante, informe nome, idade, quantidade de valores e, em seguida, os valores. A quantidade deve ser maior que zero.
 
-Na atividade 3, a correspondência dos números com frequência par usa a posição da primeira ocorrência no vetor como índice da lista de animais. Na atividade 5, se o ID calculado pela segunda fórmula ainda se repetir, o programa avança para o próximo valor representável até torná-lo único.
+Na atividade 3, para números com frequência par, a posição da primeira ocorrência no vetor é usada como índice da lista de animais. Se essa posição não existir na lista cadastrada, o programa informa que não há correspondência.
+
+Na atividade 5, o enunciado não define como variar a segunda fórmula quando ela também gera um ID repetido. Para evitar repetição infinita, o código avança para o próximo valor representável até encontrar um ID exclusivo. IDs que ultrapassam a capacidade numérica do tipo usado são recusados.
 
 ## Compilação
 
