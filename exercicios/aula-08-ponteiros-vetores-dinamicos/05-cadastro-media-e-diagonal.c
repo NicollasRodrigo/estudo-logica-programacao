@@ -45,12 +45,16 @@ int main(void) {
         if (p[i].idade < 0 || p[i].qtd < 1) return 1;
 
         p[i].id = fatorial(p[i].idade) / 2.0L;
+        if (!isfinite(p[i].id)) return 1;
+
         if (existe(p, i, p[i].id)) {
             p[i].id = powl(fatorial(p[i].idade / 2), p[i].qtd);
-            while (existe(p, i, p[i].id)) p[i].id = nextafterl(p[i].id, INFINITY);
+            if (!isfinite(p[i].id)) p[i].id = 1;
+            while (existe(p, i, p[i].id))
+                p[i].id = nextafterl(p[i].id, INFINITY);
         }
 
-        p[i].valores = malloc(p[i].qtd * sizeof *p[i].valores);
+        p[i].valores = malloc((size_t)p[i].qtd * sizeof *p[i].valores);
         if (!p[i].valores) return 1;
 
         for (j = 0; j < p[i].qtd; j++) {
