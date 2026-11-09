@@ -11,7 +11,6 @@ typedef struct {
     int quantidade;
     long double id;
     long double media;
-    long double *valores;
 } Pessoa;
 
 long double fatorial(int n) {
@@ -35,13 +34,13 @@ int idExiste(Pessoa pessoas[], int quantidade, long double id) {
     return 0;
 }
 
-long double mediaPonderada(Pessoa pessoa) {
+long double mediaPonderada(long double valores[], int quantidade) {
     long double soma = 0, soma_pesos = 0;
     int i;
 
-    for (i = 0; i < pessoa.quantidade; i++) {
+    for (i = 0; i < quantidade; i++) {
         long double peso = i + 1;
-        soma += pessoa.valores[i] * peso;
+        soma += valores[i] * peso;
         soma_pesos += peso;
     }
 
@@ -50,54 +49,84 @@ long double mediaPonderada(Pessoa pessoa) {
 
 int main(void) {
     Pessoa pessoas[PARTICIPANTES] = {0}, temp;
+    long double **matriz = calloc(PARTICIPANTES, sizeof *matriz);
+    long double *linha_temp;
     long double lados[2], diagonal;
     int quantidade_lados = 0, i, j;
 
+    if (matriz == NULL) return 1;
+
     for (i = 0; i < PARTICIPANTES; i++) {
         printf("Nome do participante %d: ", i + 1);
-        if (scanf(" %49[^\n]", pessoas[i].nome) != 1) return 1;
+        if (scanf(" %49[^\\n]", pessoas[i].nome) != 1) {
+            for (j = 0; j < i; j++) free(matriz[j]);
+            free(matriz);
+            return 1;
+        }
 
         printf("Idade: ");
         if (scanf("%d", &pessoas[i].idade) != 1 ||
-            pessoas[i].idade < 0) return 1;
+            pessoas[i].idade < 0) {
+            for (j = 0; j < i; j++) free(matriz[j]);
+            free(matriz);
+            return 1;
+        }
 
         printf("Quantidade de valores: ");
         if (scanf("%d", &pessoas[i].quantidade) != 1 ||
-            pessoas[i].quantidade < 1) return 1;
+            pessoas[i].quantidade < 1) {
+            for (j = 0; j < i; j++) free(matriz[j]);
+            free(matriz);
+            return 1;
+        }
 
         pessoas[i].id = fatorial(pessoas[i].idade) / 2.0L;
-        if (!isfinite(pessoas[i].id)) return 1;
+        if (!isfinite(pessoas[i].id)) {
+            for (j = 0; j < i; j++) free(matriz[j]);
+            free(matriz);
+            return 1;
+        }
 
         if (idExiste(pessoas, i, pessoas[i].id)) {
             pessoas[i].id =
                 powl(fatorial(pessoas[i].idade / 2), pessoas[i].quantidade);
-            if (!isfinite(pessoas[i].id)) return 1;
+            if (!isfinite(pessoas[i].id)) {
+                for (j = 0; j < i; j++) free(matriz[j]);
+                free(matriz);
+                return 1;
+            }
 
             while (idExiste(pessoas, i, pessoas[i].id)) {
                 pessoas[i].id = nextafterl(pessoas[i].id, INFINITY);
-                if (!isfinite(pessoas[i].id)) return 1;
+                if (!isfinite(pessoas[i].id)) {
+                    for (j = 0; j < i; j++) free(matriz[j]);
+                    free(matriz);
+                    return 1;
+                }
             }
         }
 
-        pessoas[i].valores =
-            malloc((size_t)pessoas[i].quantidade * sizeof *pessoas[i].valores);
-        if (pessoas[i].valores == NULL) {
-            for (j = 0; j < i; j++) free(pessoas[j].valores);
+        matriz[i] = malloc((size_t)pessoas[i].quantidade * sizeof *matriz[i]);
+        if (matriz[i] == NULL) {
+            for (j = 0; j < i; j++) free(matriz[j]);
+            free(matriz);
             return 1;
         }
 
         for (j = 0; j < pessoas[i].quantidade; j++) {
             printf("Valor %d: ", j + 1);
-            if (scanf("%Lf", &pessoas[i].valores[j]) != 1) {
-                for (int k = 0; k <= i; k++) free(pessoas[k].valores);
+            if (scanf("%Lf", &matriz[i][j]) != 1) {
+                for (int k = 0; k <= i; k++) free(matriz[k]);
+                free(matriz);
                 return 1;
             }
 
-            if (pessoas[i].valores[j] >= 0 && quantidade_lados < 2)
-                lados[quantidade_lados++] = pessoas[i].valores[j];
+            if (matriz[i][j] >= 0 && quantidade_lados < 2)
+                lados[quantidade_lados++] = matriz[i][j];
         }
 
-        pessoas[i].media = mediaPonderada(pessoas[i]);
+        pessoas[i].media =
+            mediaPonderada(matriz[i], pessoas[i].quantidade);
     }
 
     for (i = 0; i < PARTICIPANTES; i++) {
@@ -106,16 +135,20 @@ int main(void) {
                 temp = pessoas[i];
                 pessoas[i] = pessoas[j];
                 pessoas[j] = temp;
+
+                linha_temp = matriz[i];
+                matriz[i] = matriz[j];
+                matriz[j] = linha_temp;
             }
         }
     }
 
-    printf("\nClassificacao final:\n");
+    printf("\\nClassificacao final:\\n");
 
     if (quantidade_lados < 2) {
-        printf("Nao foi possivel calcular a diagonal.\n");
+        printf("Nao foi possivel calcular a diagonal.\\n");
         for (i = 0; i < PARTICIPANTES; i++)
-            printf("%s - Classificacao indisponivel\n", pessoas[i].nome);
+            printf("%s - Classificacao indisponivel\\n", pessoas[i].nome);
     } else {
         diagonal = sqrtl(lados[0] * lados[0] + lados[1] * lados[1]);
 
@@ -123,16 +156,17 @@ int main(void) {
             printf("%s - ", pessoas[i].nome);
 
             if (fabsl(pessoas[i].media - diagonal) < 0.000001L)
-                printf("SOBRE A DIAGONAL\n");
+                printf("SOBRE A DIAGONAL\\n");
             else if (pessoas[i].media > diagonal)
-                printf("ACIMA DA DIAGONAL\n");
+                printf("ACIMA DA DIAGONAL\\n");
             else
-                printf("ABAIXO DA DIAGONAL\n");
+                printf("ABAIXO DA DIAGONAL\\n");
         }
     }
 
     for (i = 0; i < PARTICIPANTES; i++)
-        free(pessoas[i].valores);
+        free(matriz[i]);
+    free(matriz);
 
     return 0;
 }
