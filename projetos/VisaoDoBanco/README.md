@@ -1,6 +1,6 @@
 # Visão do Banco
 
-Projeto em C que simula uma carteira digital, com cadastro de clientes e contas corrente, salário e poupança. O sistema permite realizar depósitos e saques, consultar extratos e histórico, solicitar empréstimos, adquirir títulos de capitalização e participar de um sorteio.
+Sistema de carteira digital com cadastro de clientes e contas corrente, salário e poupança. Permite realizar depósitos e saques, consultar extratos e histórico, solicitar empréstimos, adquirir títulos de capitalização e participar de um sorteio.
 
 ## Arquivos
 
