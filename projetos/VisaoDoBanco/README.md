@@ -1,6 +1,6 @@
 # Visão do Banco
 
-Sistema de carteira digital com cadastro de clientes e contas corrente, salário e poupança. Permite realizar depósitos e saques, consultar extratos e histórico, solicitar empréstimos, adquirir títulos de capitalização e participar de um sorteio.
+O programa simula o funcionamento de uma carteira digital. Nele, é possível cadastrar clientes, abrir contas corrente, salário e poupança, realizar depósitos e saques e consultar extratos e movimentações. Também estão disponíveis as operações de empréstimo, aquisição de títulos de capitalização e sorteio, seguindo as regras definidas no trabalho.
 
 ## Arquivos
 
@@ -14,7 +14,8 @@ Sistema de carteira digital com cadastro de clientes e contas corrente, salário
 - `memcpy` — atualiza os movimentos do histórico e copia os clientes para ordenar os cinco maiores saldos sem alterar a lista original.
 - `if` e `for` — verificam as condições das operações e percorrem os registros dos clientes.
 - `switch` — direciona as opções dos menus e trata os códigos de erro.
-- `<time.h>` e `fibonacci` — usam o horário atual para inicializar a semente aleatória; o cálculo de Fibonacci ajuda a definir o vencedor entre os cinco clientes selecionados.
+- `<time.h>` — fornece o horário usado para inicializar a sequência de números pseudoaleatórios.
+- `fibonacci` — calcula o termo utilizado para selecionar o vencedor entre os cinco participantes do sorteio.
 
 ---
 
