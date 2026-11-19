@@ -6,6 +6,7 @@ Repositório de estudos e exercícios de programação em C, organizados por aul
 
 - [Exercícios](./exercicios/README.md) — atividades práticas separadas por aula.
 - [Documentação](./docs/README.md) — anotações e materiais de apoio.
+- [Projetos](./projetos/README.md) — projetos práticos desenvolvidos em C.
 
 ## Aulas disponíveis
 
