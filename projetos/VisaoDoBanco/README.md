@@ -1,21 +1,21 @@
 # Visão do Banco
 
-O programa simula o funcionamento de uma carteira digital. Nele, é possível cadastrar clientes, abrir contas corrente, salário e poupança, realizar depósitos e saques e consultar extratos e movimentações. Também estão disponíveis as operações de empréstimo, aquisição de títulos de capitalização e sorteio, seguindo as regras definidas no trabalho.
+Simulação de uma carteira digital com cadastro de clientes, contas, movimentações, empréstimos, títulos de capitalização e sorteio.
 
 ## Arquivos
 
-- `main.c` — apresenta os menus e direciona as opções escolhidas.
-- `banco.c` — reúne as funções de cadastro, operações, consultas, validações e sorteio.
-- `meu_banco.h` — define as estruturas, constantes, códigos de erro e declarações compartilhadas.
+- `main.c` — controla o menu principal e as opções do sistema.
+- `banco.c` — implementa o cadastro, as operações bancárias, as consultas e o sorteio.
+- `meu_banco.h` — reúne estruturas, constantes e declarações das funções.
 
 ## Recursos utilizados
 
-- `realloc` — redimensiona a lista de clientes conforme novos cadastros são feitos.
-- `memcpy` — atualiza os movimentos do histórico e copia os clientes para ordenar os cinco maiores saldos sem alterar a lista original.
-- `if` e `for` — verificam as condições das operações e percorrem os registros dos clientes.
-- `switch` — direciona as opções dos menus e trata os códigos de erro.
-- `<time.h>` — fornece o horário usado para inicializar a sequência de números pseudoaleatórios.
-- `fibonacci` — calcula o termo utilizado para selecionar o vencedor entre os cinco participantes do sorteio.
+- `realloc` — ajusta a lista de clientes e aloca a cópia usada no sorteio.
+- `memcpy` — organiza os registros do histórico e copia os clientes para o sorteio.
+- `if` e `for` — validam as regras e percorrem os clientes.
+- `switch` — direciona as opções e trata os códigos de erro.
+- `<time.h>` — fornece o horário usado para inicializar o gerador de números aleatórios.
+- `fibonacci` — calcula o termo usado para selecionar o vencedor entre os cinco participantes.
 
 ---
 
