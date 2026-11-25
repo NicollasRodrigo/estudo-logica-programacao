@@ -206,13 +206,6 @@ int cadastrarCliente()
 	printf("Deseja Conta Poupanca (03)? (1-Sim / 0-Nao): ");
 	scanf("%d", &c_poup);
 	
-	if ((c_corr != 0 && c_corr != 1) ||
-		(c_sal != 0 && c_sal != 1) ||
-		(c_poup != 0 && c_poup != 1))
-	{
-		return ERRO_OPCAO_INVALIDA;
-	}
-	
 	// Validacao das combinacoes de contas permitidas
 	if (c_corr == 1 && c_sal == 1)
 	{
